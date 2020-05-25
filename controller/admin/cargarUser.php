@@ -15,8 +15,11 @@ function cargar(){
                     <th>Nombres</th>
                     <th>Apellidos</th>
                     <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Whatsapp</th>
                     <th>Cargo</th>
                     <th>Estado</th>
+                    <th>Fecha de Ingreso</th>
                     <th>Editar</th>
                     <th>Desactivar</th>
                 </tr>
@@ -31,10 +34,13 @@ function cargar(){
                 <td>'.$farray["nombre"].'</td>
                 <td>'.$farray["apellido"].'</td>
                 <td>'.$farray["email"].'</td>
+                <td>'.$farray["telefono"].'</td>
+                <td>'.$farray["whatsapp"].'</td>
                 <td>'.$farray["cargo"].'</td>
                 <td>'.$farray["estado"].'</td>
-                <td><a href="editar-usuario-admin.php?id_user='.$farray["identificacion"].'" class="fa fa-pencil">editar</a></td>
-                <td><a href="../../controller/eliminarUsuario-admin.php?id_userE='.$farray["identificacion"].'" class="fa fa-trash">Eliminar</a></td>
+                <td>'.$farray["fecha_ingreso"].'</td>
+                <td><a href="editar-usuarios-admin.php?id_user='.$farray["identificacion"].'" class="fa fa-pencil">editar</a></td>
+                <td><a href="../../controller/admin/eliminarUsuario-admin.php?id_userE='.$farray["identificacion"].'" class="fa fa-trash">Eliminar</a></td>
                  
             </tr>
             ';
@@ -42,6 +48,7 @@ function cargar(){
         echo '</tbody> </table>';
     }
 }
+
 
 
 ?>

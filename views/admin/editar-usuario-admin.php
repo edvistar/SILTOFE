@@ -278,7 +278,7 @@ require_once "../../model/seguridad.php";
                                                                 </li>
                                                                 <li><a href="#"><span class="fa fa-cog author-log-ic"></span>Settings</a>
                                                                 </li>
-                                                                <li><a href="../../controller/cerrarSesion.php"><span class="fa fa-lock author-log-ic"></span>CERRAR SESION</a>
+                                                                <li><a href="../../controller/admin/cerrarSesion.php"><span class="fa fa-lock author-log-ic"></span>CERRAR SESION</a>
                                                                 </li>
                                                             </ul>
                                                         </li>
@@ -754,7 +754,7 @@ require_once "../../model/seguridad.php";
                     <div class="hpanel">
                         <div class="panel-body">
                             <?php
-                            select();
+                            cargar();
                             ?>
                             <!-- <form action="#" id="loginForm">
                                 <div class="row">

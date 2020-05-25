@@ -2,7 +2,7 @@
 require_once "../../model/conexion.php";
 require_once "../../model/validarSesion.php";
 require_once "../../model/consulta.php";
-require_once "../../controller/verPerfil.php";
+require_once "../../controller/admin/verPerfil.php";
 require_once "../../model/seguridad.php";
 ?>
 <div class="left-sidebar-pro">
@@ -11,7 +11,7 @@ require_once "../../model/seguridad.php";
                     <a href="index.html"><img width="150px" height="100px" class="main-logo" src="../../img/logo/logo.png" alt="" /></a>
                     <strong><img src="../../img/logo/logosn.png" alt="" /></strong>
                 </div>
-                <div class="left-custom-menu-adp-wrap comment-scrollbar">
+                <!-- <div class="left-custom-menu-adp-wrap comment-scrollbar">
                     <nav class="sidebar-nav left-sidebar-menu-pro">
                         <ul class="metismenu" id="menu1">
                             <li class="active">
@@ -30,6 +30,38 @@ require_once "../../model/seguridad.php";
                             </li>
                         </ul>
                     </nav>
-                </div>
+                </div> -->
+                <div class="left-custom-menu-adp-wrap comment-scrollbar">
+                <nav class="sidebar-nav left-sidebar-menu-pro">
+                    <ul class="metismenu" id="menu1">
+                        <li class="active">
+                            <a class="has-arrow" href="index.php">
+                                <i class="fa big-icon fa-home icon-wrap"></i>
+                                <span class="mini-click-non">Administrador</span>
+							</a>
+                            <ul class="submenu-angle" aria-expanded="true">
+                            <!-- //crud usuario -->
+                                <li><a title="registro" href="registrar-usuario-admin.php"><i class="fa fa-edit" aria-hidden="true"></i> <span class="mini-sub-pro">Registrar Usuario</span></a></li>
+                                <li><a title="ver-usuarios" href="ver-usuarios-admin.php"><i class="fa fa-eye nav-icon" aria-hidden="true"></i> <span class="mini-sub-pro">Lista Usuarios</span></a></li>
+                                <!-- crud centro -->
+                                <li><a title="registro" href="registrar-centros-admin.php"><i class="fa fa-edit" aria-hidden="true"></i> <span class="mini-sub-pro">Registrar Centros</span></a></li>
+                                <li><a title="ver-centros" href="ver-centros-admin.php"><i class="fa fa-eye nav-icon" aria-hidden="true"></i> <span class="mini-sub-pro">Lista Centros</span></a></li>
+                                <!-- crud vehiculo -->
+                                <li><a title="registro" href="vehiculo/crear"><i class="fa fa-edit" aria-hidden="true"></i> <span class="mini-sub-pro">Registrar Vehiculo</span></a></li>
+                                <li><a title="ver-usuarios" href="vehiculo"><i class="fa fa-eye nav-icon" aria-hidden="true"></i> <span class="mini-sub-pro">Lista Vehiculos</span></a></li>
+                                <!-- crud producto -->
+                                <li><a title="registro" href="producto/crear"><i class="fa fa-edit" aria-hidden="true"></i> <span class="mini-sub-pro">Registrar Producto</span></a></li>
+                                <li><a title="ver-usuarios" href="producto"><i class="fa fa-eye nav-icon" aria-hidden="true"></i> <span class="mini-sub-pro">Lista Productos</span></a></li>
+                                <!-- crud solicitud -->
+                                <li><a title="registro" href="solicitud/crear"><i class="fa fa-edit" aria-hidden="true"></i> <span class="mini-sub-pro">Registrar Solicitud</span></a></li>
+                                <li><a title="ver-usuarios" href=solicitud"><i class="fa fa-eye nav-icon" aria-hidden="true"></i> <span class="mini-sub-pro">Lista Solicitudes</span></a></li>
+                                <!-- crud rutas -->
+                                <li><a title="registro" href="ruta/crear"><i class="fa fa-edit" aria-hidden="true"></i> <span class="mini-sub-pro">Registrar Rutas</span></a></li>
+                                <li><a title="ver-usuarios" href="ruta"><i class="fa fa-eye nav-icon" aria-hidden="true"></i> <span class="mini-sub-pro">Lista Rutas</span></a></li>
+                            </ul>
+                        <li><a title="Landing Page" href="" aria-expanded="false"><i class="fa fa-bookmark icon-wrap sub-icon-mg" aria-hidden="true"></i> <span class="mini-click-non">Landing Page</span></a></li>
+                    </ul>
+                </nav>
+            </div>
             </nav>
         </div>

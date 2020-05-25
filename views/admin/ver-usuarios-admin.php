@@ -1,8 +1,8 @@
 <?php
     require_once "../../model/conexion.php";
     require_once "../../model/consulta.php";
-    require_once "../../controller/cargarUser.php";
-    require_once "../../controller/verPerfil.php";
+    require_once "../../controller/admin/cargarUser.php";
+    require_once "../../controller/admin/verPerfil.php";
 require_once "../../model/seguridad.php";
 ?>
 <!doctype html>
@@ -277,7 +277,7 @@ require_once "../../model/seguridad.php";
                                                         </li>
                                                         <li><a href="#"><span class="fa fa-cog author-log-ic"></span>Settings</a>
                                                         </li>
-                                                        <li><a href="../../controller/cerrarSesion.php"><span class="fa fa-lock author-log-ic"></span>CERRAR SESION</a>
+                                                        <li><a href="../../controller/admin/cerrarSesion.php"><span class="fa fa-lock author-log-ic"></span>CERRAR SESION</a>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -743,57 +743,24 @@ require_once "../../model/seguridad.php";
            
 
 <!-- Formulario de registro -->
-<div class="container-fluid-registro">
-    <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
-         <div class="col-md-6 col-md-6 col-sm-6 col-xs-12">
-            <div class="text-center custom-login mt-20px">
-                <h3 class="registro-usuario">LISTA DE USUARIOS</h3>
-                <!-- <p>Todos los campos son obligatorios</p> -->
-            </div>
-            <div class="sparkline13-graph">
-                        <div class="datatable-dashv1-list custom-datatable-overright">
-                            <?php 
-                            cargar();
-                            ?>
-                            <!-- <table class="table table-bordered table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Identificacion</th>
-                                        <th>Nombres</th>
-                                        <th>Apellidos</th>
-                                        <th>Email</th>
-                                        <th>Cargo</th>
-                                        <th>Editar</th>
-                                        <th>Editar Usuario</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <?php 
-                                        include_once '../../model/consulta.php'; 
-                                        foreach($files as $file){
-                                            $files = new Consulta();
-                                            $files = $file;
-                                        
-                                        ?>
-
-                                        <td><?php echo $file['identificacion']; ?></td>
-                                        <td><?php echo $file['nombre']; ?></td>
-                                        <td><?php echo $file['apellido']; ?></td>
-                                        <td><?php echo $file['email']; ?></td>
-                                        <td><?php echo $file['cargo']; ?></td>
-                                        <td><a href="editar-usuario-admin.php" class="fa fa-pencil">Editar</a></td>
-                                        <td><a href="desactivar-usuario-admin.php" class="fa fa-trash">Desactivar</a></td>
-                                    </tr>
-                                    <?php  } ?>
-                                </tbody>
-                            </table> -->
+                <div class="container-fluid-registro">
+                     <div class="row">
+                    
+                            <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
+                            <div class="text-center custom-login mt-20px">
+                                <h3 class="registro-usuario">LISTA DE USUARIOS</h3>
+                                <!-- <p>Todos los campos son obligatorios</p> -->
+                            </div>
+                        
+                            <div class="datatable-dashv1-list custom-datatable-overright">
+                                <?php 
+                                cargar();
+                                ?>
+                            </div>
                         </div>
                     </div>
-        </div>
-        <!-- <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div> -->
-    </div>
+                    
+                </div>
 </div>
                 
 <?php
