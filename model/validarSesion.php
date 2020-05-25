@@ -5,7 +5,7 @@ class validarSesion{
         $model = new Conexion();
         $conexion = $model->get_conexion();
 
-        $sql = "SELECT * FROM usuarios WHERE email = :email";
+        $sql = "SELECT * FROM usuario WHERE email = :email";
         $select = $conexion->prepare($sql);
         $select->bindParam(":email", $email);
 
@@ -29,7 +29,7 @@ class validarSesion{
 
                     }if($farray['cargo']=="supervisor"){
                         echo  "<script>alert('Bienvenido Supervisor')</script>";
-                        echo '<script>location.href="../views/admin/indexSupervisor.php"</script>';
+                        echo '<script>location.href="../../views/admin/indexSupervisor.php"</script>';
 
                     }if($farray['cargo']=="bodeguero"){
                         echo  "<script>alert('Bienvenido Bodeguero')</script>";
@@ -57,7 +57,7 @@ class validarSesion{
     session_destroy();
 
     echo  "<script>alert('Sesion finalizada')</script>";
-    echo '<script>location.href="../login.php"</script>';
+    echo '<script>location.href="../../login.php"</script>';
 
     }
     

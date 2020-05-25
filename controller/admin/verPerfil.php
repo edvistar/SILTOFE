@@ -10,7 +10,7 @@ function perfil(){
         echo '
         <div class="perfil">
         <div class="imagen">
-            <img src="../'.$farray['foto'].'" class="fotoperfil" alt="foto">
+            <img src="../../'.$farray['foto'].'" class="fotoperfil" alt="foto">
         </div>
         <div class="info">
             <a href="">'.$farray['nombre'].'</a>

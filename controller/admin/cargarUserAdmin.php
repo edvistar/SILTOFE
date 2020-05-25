@@ -1,14 +1,13 @@
 <?php
-    function select(){
+    function cargar(){
     
         if(isset($_GET['id_user'])){
             $consulta = new Consulta();
             $id_user = $_GET['id_user'];
             $result = $consulta->cargarUser($id_user);
-            
             foreach($result as $farray){
                 echo '
-                <form action="../../controller/modificarUsuario-admin.php" id="loginForm" method="POST">
+                <form action="../../controller/modificarCentro-admin.php" id="loginForm" method="POST">
                 <div class="row">
                     <div class="form-group col-lg-12">
                         <label>Identificacion</label>
@@ -46,10 +45,11 @@
                 ';      
                 
             }
+           
             
         }
     }
-
+    
 
 
 ?>

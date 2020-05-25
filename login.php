@@ -91,7 +91,7 @@
                 </div>
                 <div class="hpanel">
                     <div class="panel-body">
-                        <form action="controller/iniciarSesion.php"  method="POST">
+                        <form action="controller/admin/iniciarSesion.php"  method="POST">
                             <div class="form-group">
                                 <label class="control-label" for="email">USUARIO</label>
                                 <input type="email" placeholder="example@gmail.com" title="Please enter you username" required="" value="" name="email" id="email" class="form-control">
