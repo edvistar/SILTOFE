@@ -1,7 +1,7 @@
 <?php
 require_once "../../model/conexion.php";
 require_once "../../model/consulta.php";
-require_once "../../controller/admin/cargarUserAdmin.php";
+require_once "../../controller/admin/cargarUsuario.php";
 require_once "../../controller/admin/verPerfil.php";
 require_once "../../model/seguridad.php";
 
@@ -70,35 +70,8 @@ require_once "../../model/seguridad.php";
     </head>
     <body>
         
-        <!-- Menu lateral -->
-         <!-- <div class="left-sidebar-pro">
-            <nav id="sidebar" class="">
-                <div class="sidebar-header">
-                    <a href="index.html"><img width="150px" height="100px" class="main-logo" src="../../img/logo/logo.png" alt="" /></a>
-                    <strong><img src="../../img/logo/logo.png" alt="" /></strong>
-                </div>
-                <div class="left-custom-menu-adp-wrap comment-scrollbar">
-                    <nav class="sidebar-nav left-sidebar-menu-pro">
-                        <ul class="metismenu" id="menu1">
-                            <li class="active">
-                                <a class="has-arrow" href="registrar-usuario-admin.php">
-                                    <i class="fa fa-users"></i>
-                                    <span class="mini-click-non">USUARIOS</span>
-                                    </a>
-                                <ul class="submenu-angle" aria-expanded="true">
-                                    <li><a title="Dashboard v.1" href="registrar-usuario-admin.php"><i class="fa fa-edit" aria-hidden="true"></i> <span class="mini-sub-pro">REGISTRAR</span></a></li>
-                                    <li><a title="Dashboard v.2" href="ver-usuarios-admin.php"><i class="fa fa-eye nav-icon" aria-hidden="true"></i> <span class="mini-sub-pro">VER</span></a></li>
-                                    
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </nav>
-        </div> -->
-<?php include('../../includes/menulateralsuper.php') ?>
-
-
+        <?php include('../../includes/menulateralsuper.php') ?>
+        
         <div class="header-advance-area">
             <nav class="header-top-area">
                 <div class="container-fluid">
@@ -742,74 +715,58 @@ require_once "../../model/seguridad.php";
             </div>
         </div>
 
-
-<!-- Formulario de registro -->
+<!-- Formulario de Editar -->
 <div class="container-fluid-registro">
-    <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
-        <div class="col-md-6 col-md-6 col-sm-6 col-xs-12">
-            <div class="text-center custom-login mt-20px">
-                <h3 class="registro-usuario">REGISTRO DE CENTROS DE ACOPIO</h3>
-                <p>Todos los campos son obligatorios</p>
-            </div>
-            <div class="hpanel">
-                <div class="panel-body">
-                    <form action="../../controller/admin/insertarCentro.php" id="loginForm" method="post" enctype="multipart/form-data">
-                        <div class="row">
-                            <div class="form-group col-lg-12">
-                                <label>Id Centro</label>
-                                <input type="number" name="id_centro" class="form-control" required>
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <label>Nombre</label>
-                                <input type="text" name="nombre" class="form-control" required>
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <label>Email</label>
-                                <input type="email" name="email" class="form-control" required>
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <label>Telefono</label>
-                                <input type="number" name="telefono" class="form-control" required>
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <label>Whatsapp</label>
-                                <input type="number" name="whatsapp" class="form-control" required>
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <label>Departamento</label>
-                                <input type="text" name="departamento" class="form-control" required>
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <label>Ciudad</label>
-                                <input type="text" name="ciudad" class="form-control" required>
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <label>Encargado</label>
-                                <input type="text" name="encargado" class="form-control" required>
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <label>Lugar</label>
-                                <input type="text" name="lugar" class="form-control" required>
-                            </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+                <div class="col-md-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="text-center custom-login">
+                        <h3 class="editar-usuario">EDITAR USUARIO</h3>
+                        <p>Todos los campos son obligatorios</p>
+                    </div>
+                    <div class="hpanel">
+                        <div class="panel-body">
+                            <?php
+                            cargarUsuarioEditar();
+                            ?>
+                            <!-- <form action="#" id="loginForm">
+                                <div class="row">
+                                    <div class="form-group col-lg-12">
+                                        <label>Identificacion</label>
+                                        <input type="number" class="form-control">
+                                    </div>
+                                    <div class="form-group col-lg-12">
+                                        <label>Nombre</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group col-lg-12">
+                                        <label>Apellido</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group col-lg-12">
+                                        <label>Email</label>
+                                        <input type="email" class="form-control">
+                                    </div>
+                                    <div class="form-group col-lg-12">
+                                        <label>Cargo</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    
+                                </div>
+                                <div class="text-center">
+                                    <button class="btn btn-success loginbtn">ACTUALIZAR</button>
+                                    <button class="btn btn-default">Cancel</button>
+                                </div>
+                            </form> -->
                             
                         </div>
-                        <div class="text-center">
-                            <button class="btn btn-success loginbtn">REGISTRAR</button>
-                            <button class="btn btn-default">Cancel</button>
-                        </div>
-                    </form>
+                    </div>
+                    
                 </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+        </div>       
     </div>
-    <!-- link a la pagina del fabricante -->
-    <!-- <div class="row">
-        <div class="col-md-12 text-center">
-            <p>Copyright &copy; 2018 <a href="https://colorlib.com/wp/templates/">Colorlib</a> All rights reserved.</p>
-        </div>
-    </div> -->
 </div>
                 
 <?php

@@ -1,9 +1,12 @@
 <?php
-    require_once "../../model/conexion.php";
-    require_once "../../model/consulta.php";
-    require_once "../../controller/admin/cargarUser.php";
-    require_once "../../controller/admin/verPerfil.php";
+require_once "../../model/conexion.php";
+require_once "../../model/consulta.php";
+//require_once "../../controller/admin/cargarUsuarios.php";
+require_once "../../controller/admin/cargarRuta.php";
+require_once "../../controller/admin/cargarVehiculo.php";
+require_once "../../controller/admin/verPerfil.php";
 require_once "../../model/seguridad.php";
+
 ?>
 <!doctype html>
 <html class="no-js" lang="es">
@@ -69,32 +72,7 @@ require_once "../../model/seguridad.php";
     </head>
     <body>
         
-       <!-- Menu lateral -->
-         <!-- <div class="left-sidebar-pro">
-            <nav id="sidebar" class="">
-                <div class="sidebar-header">
-                    <a href="index.html"><img width="150px" height="100px" class="main-logo" src="../../img/logo/logo.png" alt="" /></a>
-                    <strong><img src="../../img/logo/logo.png" alt="" /></strong>
-                </div>
-                <div class="left-custom-menu-adp-wrap comment-scrollbar">
-                    <nav class="sidebar-nav left-sidebar-menu-pro">
-                        <ul class="metismenu" id="menu1">
-                            <li class="active">
-                                <a class="has-arrow" href="registrar-usuario-admin.php">
-                                    <i class="fa fa-users"></i>
-                                    <span class="mini-click-non">USUARIOS</span>
-                                    </a>
-                                <ul class="submenu-angle" aria-expanded="true">
-                                    <li><a title="Dashboard v.1" href="registrar-usuario-admin.php"><i class="fa fa-edit" aria-hidden="true"></i> <span class="mini-sub-pro">REGISTRAR</span></a></li>
-                                    <li><a title="Dashboard v.2" href="ver-usuarios-admin.php"><i class="fa fa-eye nav-icon" aria-hidden="true"></i> <span class="mini-sub-pro">VER</span></a></li>
-                                    
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </nav>
-        </div> -->
+
 <?php include('../../includes/menulateralsuper.php') ?>
 
 
@@ -743,24 +721,29 @@ require_once "../../model/seguridad.php";
            
 
 <!-- Formulario de registro -->
-                <div class="container-fluid-registro">
-                     <div class="row">
-                    
-                            <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
-                            <div class="text-center custom-login mt-20px">
-                                <h3 class="registro-usuario">LISTA DE USUARIOS</h3>
-                                <!-- <p>Todos los campos son obligatorios</p> -->
-                            </div>
-                        
-                            <div class="datatable-dashv1-list custom-datatable-overright">
-                                <?php 
-                                cargar();
-                                ?>
-                            </div>
+<div class="container-fluid-registro">
+    <div class="row">
+        
+         <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
+            <div class="text-center custom-login mt-5px">
+                <h3 class="registro-usuario">LISTADO DE VEHICULOS</h3>
+                <!-- <p>Todos los campos son obligatorios</p> -->
+            </div>
+                    <div class="container fluid">
+                        <div class="datatable-dashv1-list custom-datatable-overright">
+                            <?php
+                        cargarVe();
+                            ?>
                         </div>
+                        <div class="bienvenida">
+                        <button type="button" class="btn btn-primary" onClick='window.location.assign("registrarVehiculos.php")'>Crear Vehiculo</button>
+                        </div>
+                        
                     </div>
-                    
-                </div>
+         </div>
+        </div>
+        <!-- <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div> -->
+    </div>
 </div>
                 
 <?php

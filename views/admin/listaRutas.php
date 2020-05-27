@@ -1,8 +1,8 @@
 <?php
 require_once "../../model/conexion.php";
 require_once "../../model/consulta.php";
-require_once "../../controller/admin/cargarUserAdmin.php";
-require_once "../../controller/admin/cargarCentro.php";
+//require_once "../../controller/admin/cargarUsuarios.php";
+require_once "../../controller/admin/cargarRuta.php";
 require_once "../../controller/admin/verPerfil.php";
 require_once "../../model/seguridad.php";
 
@@ -71,32 +71,7 @@ require_once "../../model/seguridad.php";
     </head>
     <body>
         
-       <!-- Menu lateral -->
-         <!-- <div class="left-sidebar-pro">
-            <nav id="sidebar" class="">
-                <div class="sidebar-header">
-                    <a href="index.html"><img width="150px" height="100px" class="main-logo" src="../../img/logo/logo.png" alt="" /></a>
-                    <strong><img src="../../img/logo/logo.png" alt="" /></strong>
-                </div>
-                <div class="left-custom-menu-adp-wrap comment-scrollbar">
-                    <nav class="sidebar-nav left-sidebar-menu-pro">
-                        <ul class="metismenu" id="menu1">
-                            <li class="active">
-                                <a class="has-arrow" href="registrar-usuario-admin.php">
-                                    <i class="fa fa-users"></i>
-                                    <span class="mini-click-non">USUARIOS</span>
-                                    </a>
-                                <ul class="submenu-angle" aria-expanded="true">
-                                    <li><a title="Dashboard v.1" href="registrar-usuario-admin.php"><i class="fa fa-edit" aria-hidden="true"></i> <span class="mini-sub-pro">REGISTRAR</span></a></li>
-                                    <li><a title="Dashboard v.2" href="ver-usuarios-admin.php"><i class="fa fa-eye nav-icon" aria-hidden="true"></i> <span class="mini-sub-pro">VER</span></a></li>
-                                    
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </nav>
-        </div> -->
+
 <?php include('../../includes/menulateralsuper.php') ?>
 
 
@@ -750,54 +725,19 @@ require_once "../../model/seguridad.php";
         
          <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
             <div class="text-center custom-login mt-5px">
-                <h3 class="registro-usuario">LISTA DE CENTROS DE ACOPIO</h3>
+                <h3 class="registro-usuario">LISTADO DE RUTAS</h3>
                 <!-- <p>Todos los campos son obligatorios</p> -->
             </div>
                     <div class="container fluid">
                         <div class="datatable-dashv1-list custom-datatable-overright">
                             <?php
-                        cargarCa();
+                        cargarRu();
                             ?>
-                            <!-- <table class="table table-bordered table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Id Centro</th>
-                                        <th>Nombre</th>
-                                        <th>Email</th>
-                                        <th>Telefono</th>
-                                        <th>Whatsapp</th>
-                                        <th>Departamento</th>
-                                        <th>Ciudad</th>
-                                        <th>Encargado</th>
-                                        <th>Lugar</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <?php 
-                                        include_once '../../model/consulta.php'; 
-                                        foreach($files as $file){
-                                            $files = new Consulta();
-                                            $files = $file;
-                                        
-                                        ?>
-
-                                        <td><?php echo $file['id_centro']; ?></td>
-                                        <td><?php echo $file['nombre']; ?></td>
-                                        <td><?php echo $file['email']; ?></td>
-                                        <td><?php echo $file['telefono']; ?></td>
-                                        <td><?php echo $file['whatsapp']; ?></td>
-                                        <td><?php echo $file['departamento']; ?></td>
-                                        <td><?php echo $file['ciudad']; ?></td>
-                                        <td><?php echo $file['encargado']; ?></td>
-                                        <td><?php echo $file['lugar']; ?></td>
-                                        <td><a href="editar-usuario-admin.php" class="fa fa-pencil">Editar</a></td>
-                                        <td><a href="desactivar-usuario-admin.php" class="fa fa-trash">Desactivar</a></td>
-                                    </tr>
-                                    <?php  } ?>
-                                </tbody>
-                            </table> -->
                         </div>
+                        <div class="bienvenida">
+                        <button type="button" class="btn btn-primary" onClick='window.location.assign("registrar-centros-admin.php")'>Crear Ruta</button>
+                        </div>
+                        
                     </div>
          </div>
         </div>

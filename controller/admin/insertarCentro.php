@@ -18,12 +18,12 @@ $lugar = $_POST['lugar'];
 
 if(strlen($id_centro) > 0 && strlen($nombre) > 0 && strlen($email) > 0 && strlen($telefono) > 0 && strlen($whatsapp) > 0  && strlen($departamento) > 0 && strlen($ciudad) > 0 && strlen($encargado) > 0 && strlen($lugar) > 0){
     
-                        $consulta = new Consulta();
-                        $result = $consulta->insertCentros($id_centro, $nombre, $email, $telefono, $whatsapp, $departamento, $ciudad, $encargado, $lugar);
+    $consulta = new Consulta();
+    $result = $consulta->insertCentros($id_centro, $nombre, $email, $telefono, $whatsapp, $departamento, $ciudad, $encargado, $lugar);
                 
-            }else{
-                echo  "<script>alert('Complete todos los campos')</script>";
-                echo '<script>location.href="../../views/admin/registrar-centros-admin.php"</script>';
+    }else{
+        echo  "<script>alert('Complete todos los campos')</script>";
+        echo '<script>location.href="../../views/admin/registrar-centros-admin.php"</script>';
     }
 
 

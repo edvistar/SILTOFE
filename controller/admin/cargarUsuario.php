@@ -1,13 +1,13 @@
 <?php
-    function cargar(){
+    function cargarUsuarioEditar(){
     
         if(isset($_GET['id_user'])){
             $consulta = new Consulta();
             $id_user = $_GET['id_user'];
-            $result = $consulta->cargarUser($id_user);
+            $result = $consulta->cargarUsuario($id_user);
             foreach($result as $farray){
                 echo '
-                <form action="../../controller/modificarCentro-admin.php" id="loginForm" method="POST">
+                <form action="../../controller/admin/modificarUsuario.php" id="loginForm" method="POST">
                 <div class="row">
                     <div class="form-group col-lg-12">
                         <label>Identificacion</label>
@@ -26,6 +26,15 @@
                         <input type="email" name="email" value="'.$farray['email'].'" class="form-control" required>
                     </div>
                     <div class="form-group col-lg-12">
+                        <label>telefono</label>
+                        <input type="number" name="telefono" value="'.$farray['telefono'].'" class="form-control" required>
+                    </div>
+                    <div class="form-group col-lg-12">
+                        <label>Whatsapp</label>
+                        <input type="number" name="whatsapp" value="'.$farray['whatsapp'].'" class="form-control" required>
+                    </div>
+
+                    <div class="form-group col-lg-12">
                         <label>Cargo</label>
                         
                     <select class="form-control select2" name="cargo" required>
@@ -34,6 +43,11 @@
                         <option value="supervisor">supervisor</option>
                         <option value="Bodeguero">Bodeguero</option>
                     </select>
+                    </div>
+                    
+                    <div class="form-group col-lg-12">
+                        <label>fecha ingreso</label>
+                        <input type="date" name="fecha_ingreso" value="'.$farray['fecha_ingreso'].'" class="form-control" required>
                     </div>
                     
                 </div>

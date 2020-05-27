@@ -1,8 +1,8 @@
 <?php
 
-function cargar(){
+function cargarUsu(){
     $consulta = new Consulta();
-    $result = $consulta->cargarUsers();
+    $result = $consulta->cargarUsuarios();
 
     if(!isset($result)){
         echo '<h2> No hay usuarios</h2>';
@@ -39,7 +39,7 @@ function cargar(){
                 <td>'.$farray["cargo"].'</td>
                 <td>'.$farray["estado"].'</td>
                 <td>'.$farray["fecha_ingreso"].'</td>
-                <td><a href="editar-usuarios-admin.php?id_user='.$farray["identificacion"].'" class="fa fa-pencil">editar</a></td>
+                <td><a href="editarUsuario.php?id_user='.$farray["identificacion"].'" class="fa fa-pencil">editar</a></td>
                 <td><a href="../../controller/admin/eliminarUsuario-admin.php?id_userE='.$farray["identificacion"].'" class="fa fa-trash">Eliminar</a></td>
                  
             </tr>

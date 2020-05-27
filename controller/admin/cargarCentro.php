@@ -5,7 +5,10 @@ function cargarCa(){
     $result = $consulta->cargarCentros();
 
     if(!isset($result)){
-        echo '<h2> No hay usuarios</h2>';
+        echo '
+        <div class="bienvenida">
+         <h1> No hay Centros registrados</h1>
+         </div>';
     }else{
         echo '
         <table class="table table-bordered table-hover tablita">
@@ -39,8 +42,8 @@ function cargarCa(){
                 <td>'.$farray["ciudad"].'</td>
                 <td>'.$farray["encargado"].'</td>
                 <td>'.$farray["lugar"].'</td>
-                <td><a href="editar-centro-admin.php?id_user='.$farray["id_centro"].'" class="fa fa-pencil">editar</a></td>
-                <td><a href="../../controller/admin/eliminarCentro-admin.php?id_centroE='.$farray["id_centro"].'" class="fa fa-trash">Eliminar</a></td>
+                <td><a href="editarCentro.php?id_user='.$farray["id_centro"].'" class="fa fa-pencil">editar</a></td>
+                <td><a href="../../controller/admin/eliminarCentro.php?id_centroE='.$farray["id_centro"].'" class="fa fa-trash">Eliminar</a></td>
                  
             </tr>
             ';
