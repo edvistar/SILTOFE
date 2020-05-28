@@ -1,10 +1,9 @@
 <?php
 require_once "../../model/conexion.php";
 require_once "../../model/consulta.php";
-require_once "../../controller/admin/cargarUsuario.php";
-//require_once "../../controller/admin/insertarVehiculo.php";
+require_once "../../controller/admin/cargarVehiculo.php";
 require_once "../../controller/admin/verPerfil.php";
-//require_once "../../model/seguridad.php";
+require_once "../../model/seguridad.php";
 
 ?>
 <!doctype html>
@@ -737,11 +736,11 @@ require_once "../../controller/admin/verPerfil.php";
                             </div>
                             <div class="form-group col-lg-12">
                                 <label>Seguro</label>
-                                <input type="text" name="seguro" class="form-control" >
+                                <input type="date" name="seguro" class="form-control" >
                             </div>
                             <div class="form-group col-lg-12">
                                 <label>Tecnomecanica</label>
-                                <input type="text" name="tecnomecanica" class="form-control" >
+                                <input type="date" name="tecnomecanica" class="form-control" >
                             </div>
                             <div class="form-group col-lg-12">
                                 <label>Tipo de Vehiculo</label>
@@ -765,7 +764,7 @@ require_once "../../controller/admin/verPerfil.php";
                             </div>
                             <div class="form-group col-lg-12">
                                 <label>Fecha de Registro</label>
-                                <input type="text" name="fecha_registro" class="form-control" >
+                                <input type="date" name="fecha_registro" class="form-control" >
                             </div>
                             
                             

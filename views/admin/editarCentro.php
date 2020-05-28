@@ -1,7 +1,7 @@
 <?php
 require_once "../../model/conexion.php";
 require_once "../../model/consulta.php";
-require_once "../../controller/admin/cargarSolicitud.php";
+require_once "../../controller/admin/cargarCentroEdit.php";
 require_once "../../controller/admin/verPerfil.php";
 require_once "../../model/seguridad.php";
 
@@ -70,9 +70,8 @@ require_once "../../model/seguridad.php";
     </head>
     <body>
         
-<?php include('../../includes/menulateralsuper.php') ?>
-
-
+        <?php include('../../includes/menulateralsuper.php') ?>
+        
         <div class="header-advance-area">
             <nav class="header-top-area">
                 <div class="container-fluid">
@@ -640,6 +639,10 @@ require_once "../../model/seguridad.php";
                                                     </ul>
                                                 </div>
                                             </div>
+                                            <!-- <div class="info">
+                                                <a href="../../controller/cerrarSesion.php">CERRAR SESION</a>
+                                            </div> -->
+                        
                                         </div>              
                                     </div>
                             </div>  
@@ -712,46 +715,28 @@ require_once "../../model/seguridad.php";
             </div>
         </div>
 
-
-<!-- Formulario de registro -->
+<!-- Formulario de Editar -->
 <div class="container-fluid-registro">
-    <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
-        <div class="col-md-6 col-md-6 col-sm-6 col-xs-12">
-            <div class="text-center custom-login mt-20px">
-                <h3 class="registro-usuario">REGISTRO DE SOLICITUD</h3>
-                <p>Todos los campos son obligatorios</p>
-            </div>
-            <div class="hpanel">
-                <div class="panel-body">
-                    <form action="../../controller/admin/insertarSolicitud.php" id="loginForm" method="post" enctype="multipart/form-data">
-                        <div class="row">
-                            <div class="form-group col-lg-12">
-                                <label>Id Solicitud</label>
-                                <input type="number" name="id_solicitud" class="form-control" required>
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <label>Solicitud</label>
-                                <input type="date" name="solicitud" class="form-control" required>
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <label>Descripcion</label>
-                                <input type="text" name="descripcion" class="form-control" required>
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <label>Cantidad de Kilos</label>
-                                <input type="number" name="cantidad_kilos" class="form-control" required>
-                            </div>   
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+                <div class="col-md-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="text-center custom-login">
+                        <h3 class="editar-usuario">EDITAR CENTRO</h3>
+                        <p>Todos los campos son obligatorios</p>
+                    </div>
+                    <div class="hpanel">
+                        <div class="panel-body">
+                            <?php
+                            cargarCentroEditar();
+                            ?>
+                            
                         </div>
-                        <div class="text-center">
-                            <button class="btn btn-success loginbtn">REGISTRAR</button>
-                            <button class="btn btn-default">Cancel</button>
-                        </div>
-                    </form>
+                    </div>
+                    
                 </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+        </div>       
     </div>
 </div>
                 

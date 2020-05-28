@@ -44,8 +44,8 @@ function cargarVe(){
                 <td>'.$farray["gps"].'</td>
                 <td>'.$farray["estado"].'</td>
                 <td>'.$farray["fecha_registro"].'</td>
-                <td><a href="editarVehiculo.php?id_user='.$farray["placa"].'" class="fa fa-pencil">editar</a></td>
-                <td><a href="../../controller/admin/eliminarVehiculo.php?id_centroE='.$farray["placa"].'" class="fa fa-trash">Eliminar</a></td>
+                <td><a href="editarVehiculo.php?placa='.$farray["placa"].'" class="fa fa-pencil">editar</a></td>
+                <td><a href="../../controller/admin/eliminarVehiculo.php?placaE='.$farray["placa"].'" class="fa fa-trash">Eliminar</a></td>
                  
             </tr>
             ';

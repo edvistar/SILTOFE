@@ -4,10 +4,10 @@ require_once('../../model/conexion.php');
 require_once('../../model/consulta.php');
 
 
-if(isset($_GET['id_userE'])){
-    $idEliminar = $_GET['id_userE'];
+if(isset($_GET['id_productoE'])){
+    $idEliminar = $_GET['id_productoE'];
     $consulta = new Consulta();
-    $result = $consulta->eliminarUser($idEliminar);
+    $result = $consulta->eliminarProductos($idEliminar);
 }else{
     echo '<script>alert("error)</script>';
 }

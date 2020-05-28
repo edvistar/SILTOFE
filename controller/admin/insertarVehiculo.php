@@ -25,7 +25,7 @@ if(strlen($placa) > 0 && strlen($capacidad) > 0 && strlen($seguro) > 0 && strlen
         
     }else{
         echo  "<script>alert('Complete todos los campos')</script>";
-        echo '<script>location.href="../../views/admin/registrar-rutas-admin.php"</script>';
+        echo '<script>location.href="../../views/admin/registrarVehiculo.php"</script>';
     }
 
 

@@ -3,7 +3,7 @@ require_once "../../model/conexion.php";
 require_once "../../model/consulta.php";
 //require_once "../../controller/admin/cargarUsuario.php";
 require_once "../../controller/admin/verPerfil.php";
-//require_once "../../controller/admin/insertarVehiculo.php";
+
 require_once "../../model/seguridad.php";
 
 ?>

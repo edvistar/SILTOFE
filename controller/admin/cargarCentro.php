@@ -14,7 +14,7 @@ function cargarCa(){
         <table class="table table-bordered table-hover tablita">
             <thead>
                 <tr>
-                    <th>id_centro</th>
+                    <th>Id centro</th>
                     <th>Nombre</th>
                     <th>Email</th>
                     <th>telefono</th>
@@ -42,7 +42,7 @@ function cargarCa(){
                 <td>'.$farray["ciudad"].'</td>
                 <td>'.$farray["encargado"].'</td>
                 <td>'.$farray["lugar"].'</td>
-                <td><a href="editarCentro.php?id_user='.$farray["id_centro"].'" class="fa fa-pencil">editar</a></td>
+                <td><a href="editarCentro.php?id_centro='.$farray["id_centro"].'" class="fa fa-pencil">editar</a></td>
                 <td><a href="../../controller/admin/eliminarCentro.php?id_centroE='.$farray["id_centro"].'" class="fa fa-trash">Eliminar</a></td>
                  
             </tr>

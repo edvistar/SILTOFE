@@ -54,7 +54,7 @@ require_once "../../model/seguridad.php";
                                 <li><a title="ver-usuarios" href="listaProductos.php"><i class="fa fa-eye nav-icon" aria-hidden="true"></i> <span class="mini-sub-pro">Lista Productos</span></a></li>
                                 <!-- crud solicitud -->
                                 <li><a title="registro" href="registrarSolicitud.php"><i class="fa fa-edit" aria-hidden="true"></i> <span class="mini-sub-pro">Registrar Solicitud</span></a></li>
-                                <li><a title="ver-usuarios" href=listaSolicitud.php"><i class="fa fa-eye nav-icon" aria-hidden="true"></i> <span class="mini-sub-pro">Lista Solicitudes</span></a></li>
+                                <li><a title="ver-usuarios" href="listaSolicitud.php"><i class="fa fa-eye nav-icon" aria-hidden="true"></i> <span class="mini-sub-pro">Lista Solicitudes</span></a></li>
                                 <!-- crud rutas -->
                                 <li><a title="registro" href="registrarRutas.php"><i class="fa fa-edit" aria-hidden="true"></i> <span class="mini-sub-pro">Registrar Rutas</span></a></li>
                                 <li><a title="ver-usuarios" href="listaRutas.php"><i class="fa fa-eye nav-icon" aria-hidden="true"></i> <span class="mini-sub-pro">Lista Rutas</span></a></li>

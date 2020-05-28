@@ -46,8 +46,8 @@ function cargarRu(){
                 <td>'.$farray["identificacion"].'</td>
                 <td>'.$farray["placa"].'</td>
                 <td>'.$farray["id_centro"].'</td>
-                <td><a href="editarRuta.php?id_user='.$farray["id_ruta"].'" class="fa fa-pencil">editar</a></td>
-                <td><a href="../../controller/admin/eliminarRuta.php?id_centroE='.$farray["id_ruta"].'" class="fa fa-trash">Eliminar</a></td>
+                <td><a href="editarRuta.php?id_ruta='.$farray["id_ruta"].'" class="fa fa-pencil">editar</a></td>
+                <td><a href="../../controller/admin/eliminarRuta.php?id_rutaE='.$farray["id_ruta"].'" class="fa fa-trash">Eliminar</a></td>
                  
             </tr>
             ';

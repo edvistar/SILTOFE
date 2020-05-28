@@ -1,7 +1,7 @@
 <?php
 require_once "../../model/conexion.php";
 require_once "../../model/consulta.php";
-require_once "../../controller/admin/cargarRuta.php";
+require_once "../../controller/admin/cargarProducto.php";
 require_once "../../controller/admin/verPerfil.php";
 require_once "../../model/seguridad.php";
 
@@ -724,17 +724,17 @@ require_once "../../model/seguridad.php";
         
          <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
             <div class="text-center custom-login mt-5px">
-                <h3 class="registro-usuario">LISTADO DE RUTAS</h3>
+                <h3 class="registro-usuario">LISTADO DE PRODUCTOS</h3>
                 <!-- <p>Todos los campos son obligatorios</p> -->
             </div>
                     <div class="container fluid">
                         <div class="datatable-dashv1-list custom-datatable-overright">
                             <?php
-                        cargarRu();
+                        cargarPr();
                             ?>
                         </div>
                         <div class="bienvenida">
-                        <button type="button" class="btn btn-primary" onClick='window.location.assign("registrarRutas.php")'>Crear Ruta</button>
+                        <button type="button" class="btn btn-primary" onClick='window.location.assign("registrarProducto.php")'>Registrar Producto</button>
                         </div>
                         
                     </div>
